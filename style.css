@@ -657,6 +657,18 @@ LOVE GIFT
         margin-top: 15px !important;
         font-size: 24px !important;
     }
+
+   .home-section {
+        /* Ubah fixed menjadi scroll agar background-size: cover berfungsi kembali */
+        background-attachment: scroll !important;
+        
+        /* Pastikan background terpusat */
+        background-position: center center !important;
+        
+        /* Opsional: Jika masih terasa kurang pas, bisa paksa ukurannya */
+        background-size: cover !important;
+    }
+   
     /* 1. Section Global - Mencegah background patah & bocor */
     .home-section .top-text.typing {
         font-size: 20px !important; /* Ukuran lebih besar agar tegas */
