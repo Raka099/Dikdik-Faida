@@ -658,7 +658,7 @@ LOVE GIFT
         font-size: 24px !important;
     }
 
-   .home-section {
+    .home-section {
         background: none !important; /* Hapus background asli */
     }
 
@@ -673,7 +673,6 @@ LOVE GIFT
         z-index: -1; /* Letakkan di belakang konten */
         will-change: transform; /* Optimasi performa iOS */
     }
-   
     /* 1. Section Global - Mencegah background patah & bocor */
     .home-section .top-text.typing {
         font-size: 20px !important; /* Ukuran lebih besar agar tegas */
@@ -705,8 +704,12 @@ LOVE GIFT
     h1.top-text {
         font-size: 32px !important; 
         margin-top: auto !important;
+        margin-bottom: auto !important;
     }
-
+    h2.top-text {
+        font-size: 20px !important; 
+        margin-top: auto !important;
+    }
     .nama {
         font-size: 45px !important;
         text-align: center;
@@ -716,17 +719,17 @@ LOVE GIFT
         font-size: 18px !important;
         text-align: center;
     }
-   .card, .img-thumbnail {
+    .card, .img-thumbnail {
     border: none !important;
     padding: 0 !important;
     box-shadow: none !important;
-   }
+    }
 
-/* Jika garisnya ada di pembungkus foto */
-   .wedding-img-stack img {
-       border: none !important;
-       outline: none !important;
-   }
+    /* Jika garisnya ada di pembungkus foto */
+    .wedding-img-stack img {
+        border: none !important;
+        outline: none !important;
+    }
     /* 3. Foto Profil & Card - Mencegah terpotong */
     .card-img-top {
         width: 65% !important;
