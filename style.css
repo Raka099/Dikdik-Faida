@@ -689,7 +689,7 @@ LOVE GIFT
 
     /* 2. Top Text & Judul - Menghapus paksaan margin inline */
     .top-text {
-        font-size: 28px !important; /* Ukuran proporsional untuk deskripsi */
+        font-size: 40px !important; /* Ukuran proporsional untuk deskripsi */
         line-height: 1.6 !important;
         margin-right: 0 !important; /* Menimpa inline style HTML */
         margin-left: 0 !important;  /* Menimpa inline style HTML */
