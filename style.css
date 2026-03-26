@@ -718,7 +718,6 @@ LOVE GIFT
     }
    .card, .img-thumbnail {
     border: none !important;
-    background-color: transparent !important;
     padding: 0 !important;
     box-shadow: none !important;
    }
