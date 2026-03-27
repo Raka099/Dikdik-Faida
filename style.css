@@ -950,11 +950,24 @@ LOVE GIFT
         padding-left: 0;
         
     }
+   .time-box {
+        text-align: center;
+    }
+
+    .time-box span {
+        font-size: 3rem !important;
+        font-weight: bold;
+    }
+
+    .time-box p {
+        margin: 0;
+        font-size: 1.5rem !important;
+    }
     @keyframes scrollUpMobile {
     0% { transform: translateY(0); }
     100% { transform: translateY(-50%); } 
     /* -50% adalah angka aman jika kamu menduplikasi isi track di JS */
-}
+   }
 }
 
 @media (max-width: 480px) {
@@ -976,6 +989,19 @@ LOVE GIFT
     
     .photo-left-container {
         margin-top: -30px; /* Jarak vertikal di HP */
+    }
+           .time-box {
+        text-align: center;
+    }
+
+    .time-box span {
+        font-size: 1.5rem !important;
+        font-weight: bold;
+    }
+
+    .time-box p {
+        margin: 0;
+        font-size: 1rem !important;
     }
 }
 
