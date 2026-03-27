@@ -600,6 +600,55 @@ LOVE GIFT
     color: #ffffff;
 }
 
+.gift-img {
+    max-width: 20%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    object-position: center top;
+    display: block;
+    margin-left: auto ;
+    margin-right: auto ;;
+}
+
+.closing {
+    position: relative;
+    /* min-height: 50vh; Tinggi minimal seukuran layar HP */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ini yang mendorong konten ke atas & bawah */
+    /* margin-bottom: px; */
+    /* padding: 60px 20px; */
+}
+.closing-p {
+    font-family: 'Cinzel', serif; /* Font bersih */
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.regards-title {
+    font-family: 'Great Vibes', cursive; /* Font latin untuk "Hormat Kami" */
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.family-label {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.family-names {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.footer-names {
+    margin-top: auto; /* Memastikan elemen ini selalu di posisi paling bawah */
+    padding-bottom: 20px;
+}
+
 
 
 /* FADE IN UP untuk setiap comment */
@@ -731,6 +780,7 @@ LOVE GIFT
         text-align: center !important;
         display: block;
         margin-top:-40px ;
+        
     }
 
     /* Khusus untuk teks judul besar yang pakai class top-text */
@@ -950,7 +1000,8 @@ LOVE GIFT
         padding-left: 0;
         
     }
-   .time-box {
+    
+    .time-box {
         text-align: center;
     }
 
@@ -963,11 +1014,61 @@ LOVE GIFT
         margin: 0;
         font-size: 1.5rem !important;
     }
+
+    .gift-img {
+        max-width: 20%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        object-position: center top;
+        display: block;
+        margin-left: auto ;
+        margin-right: auto ;
+    }
+
+    .closing {
+    position: relative;
+    /* min-height: 50vh; Tinggi minimal seukuran layar HP */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ini yang mendorong konten ke atas & bawah */
+    /* margin-bottom: px; */
+    /* padding: 60px 20px; */
+    }
+    .closing-p {
+        font-family: 'Cinzel', serif; /* Font bersih */
+        font-size: 16px;
+        line-height: 1.8;
+        max-width: 700px;
+        margin: 0 auto 40px;
+    }
+
+    .regards-title {
+        font-family: 'Great Vibes', cursive; /* Font latin untuk "Hormat Kami" */
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .family-label {
+        font-family: 'Cinzel', serif;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .family-names {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .footer-names {
+        margin-top: auto; /* Memastikan elemen ini selalu di posisi paling bawah */
+        padding-bottom: 20px;
+    }
+
     @keyframes scrollUpMobile {
     0% { transform: translateY(0); }
     100% { transform: translateY(-50%); } 
     /* -50% adalah angka aman jika kamu menduplikasi isi track di JS */
-   }
+    }
 }
 
 @media (max-width: 480px) {
@@ -990,7 +1091,7 @@ LOVE GIFT
     .photo-left-container {
         margin-top: -30px; /* Jarak vertikal di HP */
     }
-           .time-box {
+        .time-box {
         text-align: center;
     }
 
@@ -1003,6 +1104,55 @@ LOVE GIFT
         margin: 0;
         font-size: 1rem !important;
     }
+    .gift-img {
+        max-width: 20%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        object-position: center top;
+        display: block;
+        margin-left: auto ;
+        margin-right: auto ;
+    }
+
+    .closing {
+        position: relative;
+        /* min-height: 50vh; Tinggi minimal seukuran layar HP */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Ini yang mendorong konten ke atas & bawah */
+        /* margin-bottom: px; */
+        /* padding: 60px 20px; */
+    }
+    .closing-p {
+        font-family: 'Cinzel', serif; /* Font bersih */
+        font-size: 11px;
+        line-height: 1.8;
+        max-width: 700px;
+        margin: 0 auto 40px;
+    }
+
+    .regards-title {
+        font-family: 'Great Vibes', cursive; /* Font latin untuk "Hormat Kami" */
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .family-label {
+        font-family: 'Cinzel', serif;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .family-names {
+        font-size: 12px;
+        line-height: 1;
+    }
+    .footer-names {
+        margin-top: auto; /* Memastikan elemen ini selalu di posisi paling bawah */
+        padding-bottom: 20px;
+    }
+
 }
 
 @media (max-width: 992px) {
