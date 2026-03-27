@@ -482,7 +482,40 @@ LOVE GIFT
     object-fit: cover;
     object-position: center top;
 }
+.photo-left-container {
+    width: 100%;
+    /* Gunakan Flexbox untuk kontrol posisi */
+    display: flex; 
+    /* WAJIB: Memulai semua konten dari KIRI */
+    justify-content: center; 
+    align-items: center;
+    padding: 0; /* Hapus padding agar mepet pinggir layar */
+    margin-top: auto; /* (Opsional) Sesuaikan jarak vertikal jika terlalu jauh dari foto utama */
+}
 
+/* --- CSS untuk Foto Kecil (DSC_0176) --- */
+.card-gift {
+    width: 100%;
+    max-width: 190px; /* Atur ukuran agar proporsional di iPhone */
+    height: auto;
+    
+    /* Estetik: Tumpul di sisi kanan saja agar terlihat mengalir dari kiri */
+    border-radius: 10px;
+    
+    /* Hapus margin otomatis yang bikin ke tengah */
+    margin-left: 10px !important; 
+    margin-right: auto !important; 
+    box-shadow: none !important;
+    display: block;
+    margin-bottom: 10px;
+}
+.love-text {
+    margin-top: -10px;
+    font-family:'Cinzel', 'cursive' ;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
 /* ================================
    Comment
 ================================ */
@@ -882,6 +915,41 @@ LOVE GIFT
         border-radius: 10px;
     }
 
+   .photo-left-container {
+        justify-content: center;
+        margin-left: 0;
+    }
+
+    .card-gift {
+        /* Di tablet, kita perlebar fotonya agar proporsional */
+        max-width: 320px; /* Lebih besar di tablet agar tidak ompong */
+        height: auto;
+        
+        /* Memberikan efek lengkungan yang lebih halus */
+        border-radius: 0 20px 20px 0;
+        
+        /* Tetap paksa rata kiri */
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        
+        /* Tambahkan sedikit efek bayangan agar lebih tajam di layar tablet */
+        box-shadow: 8px 8px 20px rgba(0,0,0,0.15);
+    }
+    
+    /* Jika foto utama (DSC_0203) dirasa terlalu besar di tablet */
+    .card-img-top {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .love-text {
+        font-size: 22px; /* Ukuran sedang untuk tablet */
+        text-align: center !important;
+        max-width: 280px; /* Samakan dengan lebar foto di tablet */
+        margin-top: 20px;
+        padding-left: 0;
+        
+    }
     @keyframes scrollUpMobile {
     0% { transform: translateY(0); }
     100% { transform: translateY(-50%); } 
@@ -896,8 +964,18 @@ LOVE GIFT
     }
 
     .top-text {
-        font-size: 28px !important;
+        font-size: 16px;
+        margin-top: 10px;
         text-align: center;
+    }
+    .card-gift {
+        max-width: 180px; /* Sedikit lebih kecil di HP */
+        /* Jika ingin ada sedikit jarak dari bezel HP, ganti margin-left jadi 10px */
+        margin-left: 0 !important; 
+    }
+    
+    .photo-left-container {
+        margin-top: -30px; /* Jarak vertikal di HP */
     }
 }
 
