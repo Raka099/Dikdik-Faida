@@ -648,6 +648,14 @@ LOVE GIFT
     margin-top: auto; /* Memastikan elemen ini selalu di posisi paling bawah */
     padding-bottom: 20px;
 }
+.name {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
 
 
 
@@ -1027,13 +1035,13 @@ LOVE GIFT
     }
 
     .closing {
-    position: relative;
-    /* min-height: 50vh; Tinggi minimal seukuran layar HP */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Ini yang mendorong konten ke atas & bawah */
-    /* margin-bottom: px; */
-    /* padding: 60px 20px; */
+        position: relative;
+        /* min-height: 50vh; Tinggi minimal seukuran layar HP */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Ini yang mendorong konten ke atas & bawah */
+        /* margin-bottom: px; */
+        /* padding: 60px 20px; */
     }
     .closing-p {
         font-family: 'Cinzel', serif; /* Font bersih */
@@ -1063,7 +1071,14 @@ LOVE GIFT
         margin-top: auto; /* Memastikan elemen ini selalu di posisi paling bawah */
         padding-bottom: 20px;
     }
-
+    .name {
+        font-family: 'Cinzel', serif;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
     @keyframes scrollUpMobile {
     0% { transform: translateY(0); }
     100% { transform: translateY(-50%); } 
@@ -1151,6 +1166,14 @@ LOVE GIFT
     .footer-names {
         margin-top: auto; /* Memastikan elemen ini selalu di posisi paling bawah */
         padding-bottom: 20px;
+    }
+        .name {
+        font-family: 'Cinzel', serif;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
     }
 
 }

@@ -20,36 +20,58 @@ setInterval(() => {
   document.getElementById("seconds").innerHTML = seconds;
 }, 1000);
 
+// document.body.classList.add("lock-scroll");
+
+// document.getElementById("openBtn").addEventListener("click", function (e) {
+//   e.preventDefault();
+
+//   document.body.classList.remove("lock-scroll");
+
+//   const isMobile = window.innerWidth < 768;
+
+//   setTimeout(() => {
+//     document.getElementById("home").scrollIntoView({
+//       behavior: isMobile ? "auto": "smooth",
+//     });
+//   }, 100); // delay kecil
+// });
+
+// window.addEventListener("scroll", function () {
+//   const home = document.getElementById("home");
+
+//   if (window.scrollY < home.offsetTop) {
+//     window.scrollTo({
+//       top: home.offsetTop,
+//       behavior: "auto",
+//     });
+//   }
+// });
+// if ("scrollRestoration" in history) {
+//   history.scrollRestoration = "manual";
+// }
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0);
+// };
+// lock scroll saat pertama buka
 document.body.classList.add("lock-scroll");
 
 document.getElementById("openBtn").addEventListener("click", function (e) {
-  e.preventDefault();
+    e.preventDefault();
 
-  // buka scroll
-  document.body.classList.remove("lock-scroll");
+    // 1. sembunyikan hero
+    document.querySelector(".hero").style.display = "none";
 
-  // scroll ke section home
-  document.getElementById("home").scrollIntoView({
-    behavior: "smooth",
-  });
-});
+    // 2. aktifkan scroll
+    document.body.classList.remove("lock-scroll");
 
-window.addEventListener("scroll", function () {
-  const home = document.getElementById("home");
-
-  if (window.scrollY < home.offsetTop) {
-    window.scrollTo({
-      top: home.offsetTop,
-      behavior: "auto",
+    // 3. scroll ke home
+    document.getElementById("home").scrollIntoView({
+        behavior: "smooth"
     });
-  }
+    setTimeout(() => {
+      AOS.refresh();
+    },100);
 });
-if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
-}
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
 
 const elements = document.querySelectorAll(".typing");
 
