@@ -20,38 +20,7 @@ setInterval(() => {
   document.getElementById("seconds").innerHTML = seconds;
 }, 1000);
 
-// document.body.classList.add("lock-scroll");
 
-// document.getElementById("openBtn").addEventListener("click", function (e) {
-//   e.preventDefault();
-
-//   document.body.classList.remove("lock-scroll");
-
-//   const isMobile = window.innerWidth < 768;
-
-//   setTimeout(() => {
-//     document.getElementById("home").scrollIntoView({
-//       behavior: isMobile ? "auto": "smooth",
-//     });
-//   }, 100); // delay kecil
-// });
-
-// window.addEventListener("scroll", function () {
-//   const home = document.getElementById("home");
-
-//   if (window.scrollY < home.offsetTop) {
-//     window.scrollTo({
-//       top: home.offsetTop,
-//       behavior: "auto",
-//     });
-//   }
-// });
-// if ("scrollRestoration" in history) {
-//   history.scrollRestoration = "manual";
-// }
-// window.onbeforeunload = function () {
-//   window.scrollTo(0, 0);
-// };
 // lock scroll saat pertama buka
 if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
@@ -83,79 +52,7 @@ window.addEventListener("load", () => {
     window.scrollTo(0, 0);
 });
 
-const elements = document.querySelectorAll(".typing");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      const element = entry.target;
-
-      if (entry.isIntersecting) {
-        if (element.classList.contains("typing-active")) return;
-
-        element.classList.add("typing-active");
-
-        const text = element.dataset.text;
-        element.textContent = "";
-
-        let index = 0;
-
-        function typingEffect() {
-          if (index < text.length) {
-            element.textContent += text.charAt(index);
-            index++;
-            setTimeout(typingEffect, 50);
-          }
-        }
-
-        typingEffect();
-        //   } else {
-        //     // RESET saat keluar layar (biar bisa repeat)
-
-        //     element.classList.remove("typing-active");
-        //     element.textContent = "";
-        //   }
-      } else {
-        element.classList.remove("typing-active");
-        element.textContent = element.dataset.text; // balikin text
-      }
-    });
-  },
-  {
-    threshold: 0.5,
-  },
-);
-
-elements.forEach((element) => {
-  element.dataset.text = element.textContent;
-  element.textContent = "";
-  observer.observe(element);
-});
-
-// let ticking = false;
-
-// window.addEventListener("scroll", () => {
-//     if (!ticking) {
-//         window.requestAnimationFrame(() => {
-//             document.querySelectorAll("[data-aos]").forEach((el) => {
-//                 const rect = el.getBoundingClientRect();
-//                 const triggerPoint = window.innerHeight * 0.8;
-
-//                 if (rect.top > window.innerHeight || rect.bottom < 0) {
-//                     el.classList.remove("aos-animate");
-//                 }
-
-//                 if (rect.top < triggerPoint) {
-//                     el.classList.add("aos-animate");
-//                 }
-//             });
-
-//             ticking = false;
-//         });
-
-//         ticking = true;
-//     }
-// });
 let commentCount = 0;
 
 function tambahCommentKeSlider(nama, pesan) {
@@ -234,29 +131,6 @@ function tampilkanComment(nama, pesan, animate = true) {
   });
 }
 
-// const photos = [
-//     'img/DSC_0176.webp',
-//     'img/DSC_0203.webp',
-//     'img/DSC_0224.webp',
-//     'img/DSC_0245.webp',
-//     'img/DSC_0250.webp',
-//     'img/DSC_0266.webp',
-
-//     'img/DSC_0311.webp',
-//     'img/DSC_0317.webp',
-//     'img/DSC_0344.webp',
-//     'img/DSC_0475.webp',
-//     'img/DSC_0322.webp',
-//     'img/DSC_0335.webp',
-// ];
-// const photos1 = [
-//     'img/HitamPutih1.webp',
-//     'img/HitamPutih2.webp',
-//     'img/HitamPutih3.webp',
-//     'img/HitamPutih4.webp',
-//     'img/HitamPutih5.webp',
-//     'img/HitamPutih6.webp',
-// ];
 
 function loadMemories() {
     // 1. Ambil 3 ID berbeda dari HTML
@@ -267,7 +141,7 @@ function loadMemories() {
     // 2. Bagi array 'photos' menjadi dua bagian agar baris 1 dan 3 beda isinya
     // photos.slice(start, end) mengambil urutan foto tertentu
     const photosPart1 = photos.slice(0, 6);  // Foto ke 1 sampai 6
-    const photosPart2 = photos.slice(6, 12); // Foto ke 7 sampai 12
+    // const photosPart2 = photos.slice(6, 12); // Foto ke 7 sampai 12
 
     // 3. Isi Baris 1 (Warna bagian pertama)
     if (track1 && typeof photos !== 'undefined') {
@@ -287,15 +161,9 @@ function loadMemories() {
         `).join('');
     }
 
-    // 5. Isi Baris 3 (Warna bagian kedua)
-    // if (track3 && typeof photos !== 'undefined') {
-    //     track3.innerHTML = photosPart2.map(src => `
-    //         <div class="memory-item">
-    //             <img src="${src}" alt="Wedding Memory" loading="lazy">
-    //         </div>
-    //     `).join('');
-    // }
+
 }
+
 // Jalankan fungsi
 document.addEventListener("DOMContentLoaded", loadMemories);
 

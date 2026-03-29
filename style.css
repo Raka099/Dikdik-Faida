@@ -31,21 +31,6 @@ body.lock-scroll {
     overflow: hidden;
 }
 
-/* ================================
-   BACKGROUND FIXED
-================================ */
-/* .background-fixed {
-    top: 7%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('img/how-to-get-the-best-wedding-portraits-10001.jpg');
-    z-index: -1;
-    background-position: center ;
-    background-size: cover;
-    background-repeat: repeat-y;
-    position: fixed;
-} */
 
 
 /* ================================
@@ -410,18 +395,7 @@ LOVE STORY
 OUR MEMORIES
 ================================ */
 
-/* .gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 120px);
-    gap: 30px;
-    justify-content: center;
-}
-.gallery .item {
-    width: 120px;
-    height: 120px;
-    background: url('img/how-to-get-the-best-wedding-portraits-10001.jpg') center/cover;
-    border-radius: 10px;
-} */
+
 .memories-slider-container.manual-scroll {
     width: 100%;
     overflow-x: auto; /* Mengaktifkan scroll manual */
@@ -441,6 +415,7 @@ OUR MEMORIES
     width: max-content;
     padding: 0 20px; /* Padding agar foto pertama tidak terlalu mepet kiri */
 }
+
 
 .memory-item {
     width: 250px; /* Sesuaikan ukuran */
@@ -675,50 +650,7 @@ LOVE GIFT
     }
 }
 
-/* --- 2. CSS Versi Layar Normal (Laptop / Komputer) --- */
-/* Kita gunakan wrapper agar posisinya stabil di pojok */
 
-
-/* ================================
-   RESPONSIVE
-================================ */
-/* @media (max-width: 768px) {
-
-    .nama {
-        font-size: 45px;
-    }
-
-    .wedding-text {
-        font-size: 20px;
-    }
-
-    .tanggal,
-    .kepada {
-        font-size: 20px;
-    }
-
-    .btn-undangan {
-        padding: 10px 25px;
-        font-size: 14px;
-    }
-     .story-circle {
-        left: 5%;
-    }
-
-    .story-circle .circle {
-        width: 80px;
-        height: 80px;
-    }
-    .comment-slider-container {
-        height: 300px;
-        margin: 30px 10px;
-    }
-    
-    .comment-item {
-        max-width: 90%;
-        padding: 15px 20px;
-    }
-} */
 
 @media (max-width: 768px) {
 
