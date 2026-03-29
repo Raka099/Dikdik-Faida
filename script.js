@@ -70,10 +70,7 @@ function tambahCommentKeSlider(nama, pesan) {
     sliderTrack.appendChild(div);
     commentCount++;
     
-    // Restart animation untuk efek continuous
-    sliderTrack.style.animation = 'none';
-    sliderTrack.offsetHeight; // Trigger reflow
-    sliderTrack.style.animation = 'slideUp 25s linear infinite';
+
 }
 
 function kirimPesan() {
@@ -131,6 +128,23 @@ function tampilkanComment(nama, pesan, animate = true) {
   });
 }
 
+const photos = [
+  "img/DSC_0176.webp",
+  "img/DSC_0203.webp",
+  "img/DSC_0224.webp",
+  "img/DSC_0245.webp",
+  "img/DSC_0250.webp",
+  "img/DSC_0266.webp"
+];
+
+const photos1 = [
+  "img/HitamPutih1.webp",
+  "img/HitamPutih2.webp",
+  "img/HitamPutih3.webp",
+  "img/HitamPutih4.webp",
+  "img/HitamPutih5.webp",
+  "img/HitamPutih6.webp"
+];
 
 function loadMemories() {
     // 1. Ambil 3 ID berbeda dari HTML
@@ -214,4 +228,16 @@ if (musicControl && song) {
       // Jika ada icon: musicControl.innerHTML = '<i class="fas fa-play"></i>';
     }
   });
+  
 }
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const track = entry.target.querySelector('.memories-slider-track');
+    if (track) {
+      track.style.animationPlayState = entry.isIntersecting ? 'running' : 'paused';
+    }
+  });
+});
+
+observer.observe(document.querySelector('.memories-slider-container'));
