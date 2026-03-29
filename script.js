@@ -241,3 +241,21 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(document.querySelector('.memories-slider-container'));
+
+// 1. Ambil parameter dari URL browser
+const urlParams = new URLSearchParams(window.location.search);
+
+// 2. Ambil isi dari parameter 'to'
+const namaTamu = urlParams.get('to');
+
+// 3. Masukkan nama tersebut ke dalam elemen HTML
+if (namaTamu) {
+    // Menghapus tanda + atau %20 menjadi spasi biasa
+    const namaBersih = namaTamu.replace(/\+|%20/g, ' ');
+    
+    // Cari elemen dengan ID 'nama-tamu' dan ganti isinya
+    document.getElementById("nama-tamu").innerText = namaBersih;
+} else {
+    // Jika tidak ada nama di link, tampilkan teks default
+    document.getElementById("nama-tamu").innerText = "Tamu Undangan";
+}
