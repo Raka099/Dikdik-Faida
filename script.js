@@ -262,7 +262,7 @@ function loadMemories() {
     // 1. Ambil 3 ID berbeda dari HTML
     const track1 = document.getElementById("memoriesSliderTrack1"); 
     const track2 = document.getElementById("memoriesSliderTrack2"); 
-    const track3 = document.getElementById("memoriesSliderTrack3"); // Track baru
+    // const track3 = document.getElementById("memoriesSliderTrack3"); // Track baru
     
     // 2. Bagi array 'photos' menjadi dua bagian agar baris 1 dan 3 beda isinya
     // photos.slice(start, end) mengambil urutan foto tertentu
@@ -288,13 +288,13 @@ function loadMemories() {
     }
 
     // 5. Isi Baris 3 (Warna bagian kedua)
-    if (track3 && typeof photos !== 'undefined') {
-        track3.innerHTML = photosPart2.map(src => `
-            <div class="memory-item">
-                <img src="${src}" alt="Wedding Memory" loading="lazy">
-            </div>
-        `).join('');
-    }
+    // if (track3 && typeof photos !== 'undefined') {
+    //     track3.innerHTML = photosPart2.map(src => `
+    //         <div class="memory-item">
+    //             <img src="${src}" alt="Wedding Memory" loading="lazy">
+    //         </div>
+    //     `).join('');
+    // }
 }
 // Jalankan fungsi
 document.addEventListener("DOMContentLoaded", loadMemories);
