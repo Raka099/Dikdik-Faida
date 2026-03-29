@@ -422,53 +422,41 @@ OUR MEMORIES
     background: url('img/how-to-get-the-best-wedding-portraits-10001.jpg') center/cover;
     border-radius: 10px;
 } */
-.memories-slider-container {
+.memories-slider-container.manual-scroll {
     width: 100%;
-    max-width: 800px;
-    /* Sesuaikan lebar maksimal */
-    margin: 40px auto;
-    overflow: hidden;
-    position: relative;
-    /* Efek pudar di kiri dan kanan */
-    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    overflow-x: auto; /* Mengaktifkan scroll manual */
+    scroll-snap-type: x proximity; /* Membuat geseran terasa magnetis */
+    -webkit-overflow-scrolling: touch; /* Biar smooth di iPhone/Safari */
+    padding: 20px 0;
+}
+
+/* Sembunyikan scrollbar agar rapi */
+.memories-slider-container.manual-scroll::-webkit-scrollbar {
+    display: none;
 }
 
 .memories-slider-track {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     width: max-content;
-    /* Biar track sepanjang jumlah foto */
-    animation: slideLeftInfinite 30s linear infinite;
+    padding: 0 20px; /* Padding agar foto pertama tidak terlalu mepet kiri */
 }
 
 .memory-item {
-    width: 200px;
-    /* Ukuran kotak foto */
-    height: 250px;
+    width: 250px; /* Sesuaikan ukuran */
+    height: 300px;
     flex-shrink: 0;
+    scroll-snap-align: center; /* Foto akan otomatis 'nempel' di tengah saat digeser */
     border-radius: 15px;
     overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 .memory-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Agar foto tidak gepeng */
-    transition: transform 0.5s ease;
-}
-
-.memory-item:hover img {
-    transform: scale(1.1);
-    /* Efek zoom saat di-hover */
-}
-
-
-/* Berhenti saat disentuh/hover */
-.memories-slider-track:hover {
-    animation-play-state: paused;
+    pointer-events: none; /* Mencegah gambar ikut 'tertarik' saat di-drag di desktop */
 }
 
 /* ================================
@@ -1079,10 +1067,47 @@ LOVE GIFT
         text-align: center;
         align-items: center;
     }
+
+    .memories-slider-container.manual-scroll {
+        width: 100%;
+        overflow-x: auto; /* Mengaktifkan scroll manual */
+        scroll-snap-type: x proximity; /* Membuat geseran terasa magnetis */
+        -webkit-overflow-scrolling: touch; /* Biar smooth di iPhone/Safari */
+        padding: 20px 0;
+}
+
+/* Sembunyikan scrollbar agar rapi */
+    .memories-slider-container.manual-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    .memories-slider-track {
+        display: flex;
+        gap: 15px;
+        width: max-content;
+        padding: 0 20px; /* Padding agar foto pertama tidak terlalu mepet kiri */
+    }
+
+    .memory-item {
+        width: 200px !important; /* Sesuaikan ukuran */
+        height: 250px;
+        flex-shrink: 0;
+        scroll-snap-align: center; /* Foto akan otomatis 'nempel' di tengah saat digeser */
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .memory-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none; /* Mencegah gambar ikut 'tertarik' saat di-drag di desktop */
+    }
     @keyframes scrollUpMobile {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-50%); } 
-    /* -50% adalah angka aman jika kamu menduplikasi isi track di JS */
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-50%); } 
+        /* -50% adalah angka aman jika kamu menduplikasi isi track di JS */
     }
 }
 
@@ -1174,6 +1199,42 @@ LOVE GIFT
         justify-content: center;
         text-align: center;
         align-items: center;
+    }
+        .memories-slider-container.manual-scroll {
+        width: 100%;
+        overflow-x: auto; /* Mengaktifkan scroll manual */
+        scroll-snap-type: x proximity; /* Membuat geseran terasa magnetis */
+        -webkit-overflow-scrolling: touch; /* Biar smooth di iPhone/Safari */
+        padding: 20px 0;
+}
+
+/* Sembunyikan scrollbar agar rapi */
+    .memories-slider-container.manual-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    .memories-slider-track {
+        display: flex;
+        gap: 15px;
+        width: max-content;
+        padding: 0 20px; /* Padding agar foto pertama tidak terlalu mepet kiri */
+    }
+
+    .memory-item {
+        width: 150px !important; /* Sesuaikan ukuran */
+        height: 200px;
+        flex-shrink: 0;
+        scroll-snap-align: center; /* Foto akan otomatis 'nempel' di tengah saat digeser */
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .memory-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none; /* Mencegah gambar ikut 'tertarik' saat di-drag di desktop */
     }
 
 }

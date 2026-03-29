@@ -234,48 +234,54 @@ function tampilkanComment(nama, pesan, animate = true) {
   });
 }
 
-const photos = [
-    'img/DSC_0176.webp',
-    'img/DSC_0203.webp',
-    'img/DSC_0224.webp',
-    'img/DSC_0245.webp',
-    'img/DSC_0250.webp',
-    'img/DSC_0266.webp',
+// const photos = [
+//     'img/DSC_0176.webp',
+//     'img/DSC_0203.webp',
+//     'img/DSC_0224.webp',
+//     'img/DSC_0245.webp',
+//     'img/DSC_0250.webp',
+//     'img/DSC_0266.webp',
 
-    'img/DSC_0311.webp',
-    'img/DSC_0317.webp',
-    'img/DSC_0344.webp',
-    'img/DSC_0475.webp',
-    'img/DSC_0322.webp',
-    'img/DSC_0335.webp',
-];
-const photos1 = [
-    'img/HitamPutih1.webp',
-    'img/HitamPutih2.webp',
-    'img/HitamPutih3.webp',
-    'img/HitamPutih4.webp',
-    'img/HitamPutih5.webp',
-    'img/HitamPutih6.webp',
-];
+//     'img/DSC_0311.webp',
+//     'img/DSC_0317.webp',
+//     'img/DSC_0344.webp',
+//     'img/DSC_0475.webp',
+//     'img/DSC_0322.webp',
+//     'img/DSC_0335.webp',
+// ];
+// const photos1 = [
+//     'img/HitamPutih1.webp',
+//     'img/HitamPutih2.webp',
+//     'img/HitamPutih3.webp',
+//     'img/HitamPutih4.webp',
+//     'img/HitamPutih5.webp',
+//     'img/HitamPutih6.webp',
+// ];
 
 function loadMemories() {
     const trackColor = document.getElementById("memoriesSliderTrack");
     const trackBW = document.getElementById("memoriesSliderTrack");
     
     // Kita looping 2x agar animasinya tidak putus (seamless loop)
-    const doubleColor = [...photos, ...photos];
-    const doubleBW = [...photos1, ...photos1];
+    // const doubleColor = [...photos, ...photos];
+    // const doubleBW = [...photos1, ...photos1];
+
+    if (trackColor){
+          trackColor.innerHTML = doubleColor.map(src => `
+        <div class="memory-item">
+            <img src="${src}" alt="Wedding Memory">
+        </div>
+    `).join('');
+    }
+
+    if (trackBW){
+      trackBW.innerHTML = doubleBW.map(src => `
+        <div class="memory-item">
+            <img src="${src}" alt="Wedding Memory">
+        </div>
+    `).join('');
+    }
     
-    trackColor.innerHTML = doubleColor.map(src => `
-        <div class="memory-item">
-            <img src="${src}" alt="Wedding Memory">
-        </div>
-    `).join('');
-    trackBW.innerHTML = doubleBW.map(src => `
-        <div class="memory-item">
-            <img src="${src}" alt="Wedding Memory">
-        </div>
-    `).join('');
 }
 
 // Jalankan fungsi saat halaman diload
