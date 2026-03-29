@@ -259,32 +259,30 @@ function tampilkanComment(nama, pesan, animate = true) {
 // ];
 
 function loadMemories() {
-    const trackColor = document.getElementById("memoriesSliderTrack");
-    const trackBW = document.getElementById("memoriesSliderTrack");
+    // 1. Ambil ID yang berbeda untuk masing-masing baris
+    const trackColor = document.getElementById("memoriesSliderTrack1"); 
+    const trackBW = document.getElementById("memoriesSliderTrack2"); 
     
-    // Kita looping 2x agar animasinya tidak putus (seamless loop)
-    // const doubleColor = [...photos, ...photos];
-    // const doubleBW = [...photos1, ...photos1];
-
-    if (trackColor){
-          trackColor.innerHTML = doubleColor.map(src => `
-        <div class="memory-item">
-            <img src="${src}" alt="Wedding Memory">
-        </div>
-    `).join('');
+    // 2. Isi baris pertama (Gunakan variabel 'photos' dari HTML)
+    if (trackColor && typeof photos !== 'undefined') {
+        trackColor.innerHTML = photos.map(src => `
+            <div class="memory-item">
+                <img src="${src}" alt="Wedding Memory" loading="lazy">
+            </div>
+        `).join('');
     }
 
-    if (trackBW){
-      trackBW.innerHTML = doubleBW.map(src => `
-        <div class="memory-item">
-            <img src="${src}" alt="Wedding Memory">
-        </div>
-    `).join('');
+    // 3. Isi baris kedua (Gunakan variabel 'photos1' dari HTML)
+    if (trackBW && typeof photos1 !== 'undefined') {
+        trackBW.innerHTML = photos1.map(src => `
+            <div class="memory-item">
+                <img src="${src}" alt="Wedding Memory" loading="lazy">
+            </div>
+        `).join('');
     }
-    
 }
 
-// Jalankan fungsi saat halaman diload
+// Jalankan fungsi
 document.addEventListener("DOMContentLoaded", loadMemories);
 
 function BukaMaps() {
