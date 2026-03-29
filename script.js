@@ -134,7 +134,7 @@ const photos = [
   "img/DSC_0224.webp",
   "img/DSC_0245.webp",
   "img/DSC_0250.webp",
-  "img/DSC_0266.webp"
+  "img/DSC_0266.jpg"
 ];
 
 const photos1 = [
