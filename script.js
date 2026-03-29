@@ -53,6 +53,12 @@ setInterval(() => {
 //   window.scrollTo(0, 0);
 // };
 // lock scroll saat pertama buka
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+window.scrollTo(0, 0);
+
 document.body.classList.add("lock-scroll");
 
 document.getElementById("openBtn").addEventListener("click", function (e) {
@@ -71,6 +77,10 @@ document.getElementById("openBtn").addEventListener("click", function (e) {
     setTimeout(() => {
       AOS.refresh();
     },100);
+});
+
+window.addEventListener("load", () => {
+    window.scrollTo(0, 0);
 });
 
 const elements = document.querySelectorAll(".typing");
@@ -225,27 +235,27 @@ function tampilkanComment(nama, pesan, animate = true) {
 }
 
 const photos = [
-    'img/DSC_0176.jpg',
-    'img/DSC_0203.jpg',
-    'img/DSC_0224.jpg',
-    'img/DSC_0245.jpg',
-    'img/DSC_0250.jpg',
-    'img/DSC_0266.jpg',
+    'img/DSC_0176.webp',
+    'img/DSC_0203.webp',
+    'img/DSC_0224.webp',
+    'img/DSC_0245.webp',
+    'img/DSC_0250.webp',
+    'img/DSC_0266.webp',
 
-    'img/DSC_0311.jpg',
-    'img/DSC_0317.jpg',
-    'img/DSC_0344.jpg',
-    'img/DSC_0475.jpg',
-    'img/DSC_0322.jpg',
-    'img/DSC_0335.jpg',
+    'img/DSC_0311.webp',
+    'img/DSC_0317.webp',
+    'img/DSC_0344.webp',
+    'img/DSC_0475.webp',
+    'img/DSC_0322.webp',
+    'img/DSC_0335.webp',
 ];
 const photos1 = [
-    'img/HitamPutih1.jpg',
-    'img/HitamPutih2.jpg',
-    'img/HitamPutih3.jpg',
-    'img/HitamPutih4.jpg',
-    'img/HitamPutih5.jpg',
-    'img/HitamPutih6.jpg',
+    'img/HitamPutih1.webp',
+    'img/HitamPutih2.webp',
+    'img/HitamPutih3.webp',
+    'img/HitamPutih4.webp',
+    'img/HitamPutih5.webp',
+    'img/HitamPutih6.webp',
 ];
 
 function loadMemories() {
